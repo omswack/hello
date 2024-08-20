@@ -14,11 +14,6 @@ p {
     min-height: 100vh;
 }
 
-footer {
-    background: #f2f2f2;
-    padding: 20px;
-}
-
 nav {
 /*    margin-top: 10%;*/
 /*    margin-left: 2%;*/
@@ -196,9 +191,10 @@ justify-content: center;
 footer {
     background-color: #f1f1f1;
     padding: 10px;
-    text-align: center;
-      position: relative;
+    position: relative;
     width: 100%;
+    text-align: center;
+    font-size: 1em;
 }
 .footer-link img {
     width: 40px; /* Adjust size as needed */
@@ -230,7 +226,6 @@ footer {
     margin-bottom: 90vh;
 }
 }
-
 @media (max-width: 768px) 
 {
     nav li a 
