@@ -1,0 +1,265 @@
+body {
+    font-family: 'Merriweather', serif;
+    display: grid;
+    min-height: 100vh;
+}
+
+p {
+    font-size: 1.5em;
+}
+
+.container-fluid {
+    display: grid;
+    grid-gap: 0;
+    min-height: 100vh;
+}
+
+footer {
+    background: #f2f2f2;
+    padding: 20px;
+}
+
+nav {
+/*    margin-top: 10%;*/
+/*    margin-left: 2%;*/
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav li {
+    margin-right: 20px;
+}
+
+nav li a {
+    color: black;
+    text-decoration: none;
+    font-size: 1.5em;
+}
+
+nav li a:hover {
+    color: #5865F2;
+}
+
+.tblockvis {
+    width: 100%; 
+    height: auto; 
+    border-radius: 25px;
+    padding-bottom: 15px;
+}
+
+#slogan-margin {
+    margin-bottom: 300px;
+}
+
+#slogan-heading {
+    margin-top: 15vh;
+    font-size: 5em;
+}
+
+#slogan-font-size {
+    font-size: 3em;
+}
+
+#color-1 {
+    background: linear-gradient(249.19deg, #F2F8FC -7.36%, #D1E5FF 115.09%);
+}
+
+#projects {
+/*    margin-top: 5vh;*/
+/*    margin-bottom: 5vh;*/
+}
+
+.divmargins {
+  margin-top: 10%;
+  margin-bottom: 25%;
+}
+
+.divmargins2 {
+    margin-top: 10%;
+}
+
+/* for viewport up to 992 */
+.divmargins3 {
+    margin-bottom: 0vh;
+}
+
+.tblock-big-space {
+    margin-bottom: 70vh;
+}
+
+
+main {
+  overflow-y: scroll;  
+  scroll-snap-type: y mandatory; /* Enable horizontal snap points */
+  height: 100vh;                /* Full viewport height */
+}
+
+.scroll-item-top {
+  scroll-snap-align: start;    /* Snap to the center of the container */
+}
+
+.scroll-item-mid {
+ scroll-snap-align: center;
+}
+
+.scroll-item-bot {
+ scroll-snap-align: end;
+}
+
+.center {
+display: flex;
+justify-content: center;
+}
+.pulsing-heading {
+    font-size: 3em;
+    text-align: center;
+    animation: pulse 1.5s; /* Apply animation */
+    animation-iteration-count: 3;
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.1); /* Slightly increase size */
+        opacity: 0.8; /* Slightly decrease opacity */
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Dropdown Styles */
+.tblock {
+  background: #FEFEFE;
+  width: 60%;
+  height: 85px;
+  border-radius: 25px;
+  box-shadow: -13px -13px 13px rgba(242, 243, 244, 0.3), 
+              13px 13px 13px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 10%; /* Add some margin for separation */
+  transition: width 0.5s ease-in-out;
+}
+
+.tblock-title {
+    font-size: 1.5em;
+    text-align: center;
+}
+.tblock-big {
+  padding: 20px;
+  z-index: 1;
+  background: #ebebeb;
+  width: 100%;
+  max-height: none;
+  overflow: hidden;
+  border-radius: 25px;
+  box-shadow: -13px -13px 13px rgba(242, 243, 244, 0.3), 
+              13px 13px 13px rgba(0, 0, 0, 0.2);
+  position: absolute;
+  top: 85px; /* Adjust this based on tblock height */
+  opacity: 0; /* Start invisible */
+}
+
+.tblock:hover {
+  width: 95%; /* Expand width on hover */
+}
+
+.tblock:hover .tblock-big {
+  opacity: 1; /* Make visible */
+  transition: max-height 1s ease 0.5s, opacity 0.5s ease; /* Delay vertical expansion */
+  transition-delay: 0.5s, 0.5s, 0.5s;
+}
+
+/* When tblock is active */
+.tblock.active {
+  width: 95%;
+  height: 85px; 
+}
+
+.tblock.active .tblock-big {
+  opacity: 1;
+}
+
+footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+      position: relative;
+    width: 100%;
+}
+.footer-link img {
+    width: 40px; /* Adjust size as needed */
+    height: auto;
+    transition: opacity 0.3s;
+}
+.footer-link img:hover {
+    opacity: 0.7; /* Optional: Add hover effect */
+}
+
+/* Media breakpoints for dynamic window sizing */
+
+/* ULTRA TINYYYYYYY */
+@media (max-width: 430px)
+{
+    #about img {
+    max-width: 100%; /* Ensure the image fits within the container */
+    height: auto;    /* Maintain aspect ratio */
+    }
+}
+
+/* Small devices (up to 768px) */
+
+@media (max-width: 768px) 
+{
+    nav li a 
+    {
+    font-size: 1em;
+    }
+}
+
+@media (max-width: 1024px) 
+{
+    nav li a 
+    {
+    font-size: 1.15em;
+    }
+}
+
+
+@media (max-width: 992px) 
+{
+ .divmargins3 {
+    margin-bottom: 70vh;
+ }
+
+ .divmargin2 {
+    margin-top: 0%;
+ }
+
+ .snap_item {
+    scroll-snap-align: start;
+}
+}
+
+
+
+@media (min-width: 1025px) and (max-width: 1390px) 
+{
+    nav li a 
+        {
+        font-size: 1.2em;
+        }
+}

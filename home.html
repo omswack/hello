@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oliver Swack Portfolio</title>
+  <!-- external CSS file -->
+  <link rel="stylesheet" type="text/css" href="design.css">
+  <!-- additional external stylesheets -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div class="design scroll-item-top">
+      <!-- Navigation Bar -->
+      <nav>
+        <ul>
+          <li><a href="#about">About</a></li>
+          <li><a href="#portfolio">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="hi-i-m-oliver">
+        Hi, I’m <span style="color: #c4fa3b">Oliver</span>
+      </div>
+
+      <div class ="stack">
+        <div class="data">
+          <span>Data</span>
+        </div>
+        <div class="i-am-an-aspiring">
+          <span id="test"> I am an aspiring Data Scientist who is interested in gaining a better understanding of the environment(s)
+          around us. I enjoy spending time thinking (and coding) outside of the box.</span>
+        </div>
+      </div>
+
+      <div class="scientist">
+        Scientist.
+      </div>
+
+      <div class="problem-solver">
+        <span> Problem Solver. </span>
+      </div>
+    </div>
+    <div class="container-fluid">
+      <div class="row no-gutters justify-content-center divmargins2 scroll-item-top">
+        <h2 id="projects">Projects</h2>
+      </div>
+      <div class="row no-gutters tblock-big-space" id="portfolio">
+        <div class="col-lg-6 d-flex justify-content-center divmargins3">
+          <div class="tblock">
+            <span class='tblock-title'> Climate Dynamics </span>
+            <div class="tblock-big">
+            <img src="./climate_dynamics.png" class="tblockvis">
+             Climate change is undoubtedly one of the leading existential threats we face today. Combatting this threat and improving our understanding of the environments around us, thousands of scientists actively study Earth’s climate to inspire solutions. Beginning in the summer of 2023, I interned as a research assistant at USC’s Climate Dynamics Lab. My primary task was to produce a model that analyzes the net warming trends (heating anomalies) in Earth's atmosphere from the last few thousand years through the 22nd century. To read more about my research and view the repository, click <a href="https://github.com/omswack/summer-research-2023" target="_blank" rel="noopener">here</a>.
+           </div>
+         </div>
+       </div>
+     <!-- </div>
+       <div class="row no-gutters item-space"> -->
+        <div class="col-lg-6 d-flex justify-content-center snap_item">
+          <div class="tblock">
+            <span class='tblock-title'> CNN-LSTM Deep Learning </span>
+            <div class="tblock-big">
+              <img src="./validation_test.png" class="tblockvis">
+              In 2015, the U.N. introduced 17 sustainable development goals, or <a href="https://sdgs.un.org/goals" target="_blank" rel="noopener">SDGs</a>, to strategically focus on healthier economic development towards 2030. One of the SDGs focuses on reducing greenhouse gas emissions and being inspired by this, my peers and I wanted to see if we could predict air quality patterns to gain a better understanding of how to minimize them. Starting from scratch, I designed a deep-learning model to predict the future presence of particulate matter in our atmosphere. I calculated all of the tensor and convolution dimensions firstly by hand and then proceeded to implement it using PyTorch. The model was trained off of time series data, to learn more and view the code, click <a href="https://github.com/omswack/aersol-CNN-LSTM" target="_blank" rel="noopener">here</a>.
+         </div>
+       </div>
+     </div>
+   </div>
+     <div class="row no-gutters tblock-big-space scroll-item-top divmargins2">
+      <div class="col-lg-6 d-flex justify-content-center divmargins2">
+        <div class="tblock divmargins3">
+          <span class='tblock-title'> MusicaHub (GeoListen) </span>
+          <div class="tblock-big">
+            <video autoplay loop muted poster="" class ="tblockvis">
+              <source src="./spotifyloop.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+           MusicaHub is a full-stack web development project that allows users to stay up to date on the "global" listening experience. Powered by Spotify's REST API, the platform is constantly updated on any recent changes to the playlist(s) located in Spotify. The songs page features a dynamic loading UI. The platform utilizes SQL to manage user states, metadata, and so on for a heightened experience. Through the different user states such as admin, regular, and guest, the project effectively provides CRUD functionality. For more info, click <a href="https://github.com/omswack/fullstack_project" target="_blank" rel="noopener">here</a>.
+         </div>
+       </div>
+     </div>
+<!--  </div>
+ <div class="row no-gutters item-space"> -->
+  <div class="col-lg-6 d-flex justify-content-center divmargins2 snap_item">
+    <div class="tblock">
+      <span class='tblock-title'> Labor Force Sentiment Analysis </span>
+      <div class="tblock-big">
+       Coming Soon.
+     </div>
+   </div>
+ </div>
+</div>
+
+<div class="row no-gutters scroll-item-top" id="about">
+  <div class="col-12 center divmargins2">
+    <img src="./portrait_for_page.png" alt="Oliver's Portrait">
+  </div>
+  <div class="offset-1 col-10 divmargins">
+    <p>
+      I am a recent graduate from the University of Southern California (Fight On!) where I hold a dual degree in 1.) Data Science and 2.) International Relations and the Global Economy. I am currently seeking career opportunities in data science and adjacent fields where I can improve my technical abilities and be a leader. Aside from my current career interest, as my degrees suggest I am curious individual and enjoy studying different subjects including (not exclusively) macroeconomics and finance, global policy and affairs, philosophy, history (currently Early Renaissance) and mathematics. In my free time, I enjoy weightlifting, swimming, reading, backpacking, learning guitar, and watching the Chicago Cubs beat the White Sox.
+    </p>
+  </div>
+</div>
+</div>
+
+</main>
+
+<footer id="contact">
+  &copy; 2024 Oliver Swack. All rights reserved. 
+  <a href="https://www.linkedin.com/in/oliverswack/" class="footer-link" target="_blank" rel="noopener noreferrer">
+    <img src="./linkedin.png" alt="LinkedIn Profile">
+  </a>
+  Click here to connect!
+</footer>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="scripts.js"></script>
+</body>
+</html>

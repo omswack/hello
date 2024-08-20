@@ -1,0 +1,367 @@
+@import url("https://fonts.googleapis.com/css?family=Staatliches:400");
+
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+
+
+/* Container design */
+.design {
+  display: grid;
+  background-color: #ffffff;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+/* Styles for the slogan heading */
+.design .hi-i-m-oliver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 128px;
+  letter-spacing: 0;
+  line-height: 1; /* Ensure tight line-height */
+  white-space: nowrap;
+  color: #000000;
+  margin-top: 7%;
+  margin-left: 57.5%;
+/*  margin-bottom: -3%;*/
+}
+
+/* Styles for the data section */
+.design .data {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 225px;
+  letter-spacing: 0;
+  color: #000000;
+  line-height: 0.75; 
+
+}
+
+/* Styles for the scientist section */
+.design .scientist {
+  overflow: visible;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 225px;
+  letter-spacing: 0;
+  color: #c4fa3b;
+  line-height: 0.65; /* Ensure tight line-height */
+  margin-top: -100px;
+}
+
+/* Styles for the problem solver section */
+.design .problem-solver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 225px;
+  letter-spacing: 0;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+/* Define the flex container */
+.stack {
+  display: flex;
+/*  overflow: visible;*/
+line-height: ;
+}
+
+/* rectangle */
+.design .i-am-an-aspiring {
+  align-self: flex-end;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 32px;
+  letter-spacing: 0;
+  line-height: 1; /* Ensure tight line-height */
+  border: 2px solid #000000;
+  z-index: 1;
+  width: 300px;
+  margin-left: 706px;
+  overflow: visible;
+  padding: 10px
+}
+
+.design #test {
+  margin-top:%;
+}
+
+/* Media breakpoints for dynamic window sizing */
+
+/* ULTRA TINYYYYYYY */
+@media (max-width: 430px)
+{
+
+  .design .hi-i-m-oliver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 32.33px; /* was 70.4 */
+  letter-spacing: 0;
+  line-height: 1; 
+  white-space: nowrap;
+  color: #000000;
+  margin-top: 7%;
+  margin-left: 58.5%;
+}
+
+.design .data {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 58.826px; /* was 123.75 */
+  letter-spacing: 0;
+  color: #000000;
+  line-height: 0.75; 
+
+}
+
+.design .scientist {
+  overflow: visible;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 58.826px; /* was 123.75 */
+  letter-spacing: 0;
+  color: #c4fa3b;
+  line-height: 1; 
+  margin-top: -40px;
+}
+
+.design .problem-solver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 58.826px; /* was 123.75 */
+  letter-spacing: 0;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.design .i-am-an-aspiring {
+  align-self: flex-end;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 8.1px; /* was 17.6 */
+  letter-spacing: 0;
+  line-height: 1; 
+  border: 1.75px solid #000000;
+  z-index: 1;
+  width: 75.768px; /* was 165 */
+  margin-left: 187px;
+  overflow: visible;
+  padding: 2.75px /* was 10 */
+} 
+}
+/* Small devices (up to 768px) */
+@media (min-width: 430px) and (max-width: 768px) 
+{
+
+  .design .hi-i-m-oliver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 39.424px; /* was 70.4 */
+  letter-spacing: 0;
+  line-height: 1; 
+  white-space: nowrap;
+  color: #000000;
+  margin-top: 7%;
+  margin-left: 57.5%;
+}
+
+.design .data {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 69.3px; /* was 123.75 */
+  letter-spacing: 0;
+  color: #000000;
+  line-height: 0.75; 
+
+}
+
+.design .scientist {
+  overflow: visible;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 69.3px; /* was 123.75 */
+  letter-spacing: 0;
+  color: #c4fa3b;
+  line-height: 1; 
+  margin-top: -40px;
+}
+
+.design .problem-solver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 69.3px; /* was 123.75 */
+  letter-spacing: 0;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.design .i-am-an-aspiring {
+  align-self: flex-end;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 9.856px; /* was 17.6 */
+  letter-spacing: 0;
+  line-height: 1; 
+  border: 2px solid #000000;
+  z-index: 1;
+  width: 92.4px; /* was 165 */
+  margin-left: 217px;
+  overflow: visible;
+  padding: 3px /* was 10 */
+} 
+}
+
+/* Medium devices (769px to 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) 
+{
+ .design .hi-i-m-oliver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 70.4px; /* was 79 */
+  letter-spacing: 0;
+  line-height: 1; 
+  white-space: nowrap;
+  color: #000000;
+  margin-top: 7%;
+  margin-left: 57.5%;
+}
+
+.design .data {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 123.75px; /* was 225 */
+  letter-spacing: 0;
+  color: #000000;
+  line-height: 0.75; 
+
+}
+
+.design .scientist {
+  overflow: visible;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 123.75px; /* was 225 */
+  letter-spacing: 0;
+  color: #c4fa3b;
+  line-height: 1; 
+  margin-top: -100px;
+}
+
+.design .problem-solver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 123.75px; /* was 225 */
+  letter-spacing: 0;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.design .i-am-an-aspiring {
+  align-self: flex-end;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 17.6px; /* was 32 */
+  letter-spacing: 0;
+  line-height: 1; 
+  border: 1px solid #000000;
+  z-index: 1;
+  width: 165px; /* was 300 */
+  margin-left: 388px;
+  overflow: visible;
+  padding: 10px
+} 
+}
+
+/* Large devices (1025px and up) */
+@media (min-width: 1025px) and (max-width: 1390px) 
+{
+  .design .hi-i-m-oliver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 94.72px; /* was 128 */
+  letter-spacing: 0;
+  line-height: 1; 
+  white-space: nowrap;
+  color: #000000;
+  margin-top: 7%;
+  margin-left: 57.5%;
+}
+
+.design .data {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 166.5px; /* was 225 */
+  letter-spacing: 0;
+  color: #000000;
+  line-height: 0.75; 
+
+}
+
+.design .scientist {
+  overflow: visible;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 166.5px; /* was 225 */
+  letter-spacing: 0;
+  color: #c4fa3b;
+  line-height: 1; 
+  margin-top: -100px;
+}
+
+.design .problem-solver {
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 166.55px; /* was 225 */
+  letter-spacing: 0;
+  color: #000000;
+  white-space: nowrap;
+  line-height: 1;
+}
+
+.design .i-am-an-aspiring {
+  align-self: flex-end;
+  position: relative;
+  font-family: "Staatliches", Helvetica;
+  font-weight: 400;
+  font-size: 23.7px; /* was 32 */
+  letter-spacing: 0;
+  line-height: 1; 
+  border: 1px solid #000000;
+  z-index: 1;
+  width: 222px; /* was 300 */
+  margin-left: 520px;
+  overflow: visible;
+  padding: 10px
+} 
+}
