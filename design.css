@@ -226,8 +226,8 @@ footer {
 
 @media (max-width: 530px) 
 {
-.tblock-big-space {
-margin-bottom: 0vh;
+    .tblock-big-space {
+    margin-bottom: 90vh;
 }
 }
 @media (max-width: 768px) 
@@ -263,6 +263,8 @@ margin-bottom: 0vh;
     scroll-snap-align: start;
 }
 }
+
+
 
 @media (min-width: 1025px) and (max-width: 1390px) 
 {
