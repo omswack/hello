@@ -227,7 +227,7 @@ footer {
 @media (max-width: 530px) 
 {
 .tblock-big-space {
-margin-bottom: 90vh;
+margin-bottom: 0vh;
 }
 }
 @media (max-width: 768px) 
