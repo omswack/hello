@@ -40,6 +40,9 @@ nav li a:hover {
     color: #5865F2;
 }
 
+.navbar-icon {
+  height: 1.5em; /* Same as the font size of nav links */
+}
 .tblockvis {
     width: 100%; 
     height: auto; 
