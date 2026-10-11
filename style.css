@@ -1,367 +1,623 @@
-@import url("https://fonts.googleapis.com/css?family=Staatliches:400");
+/* ===== CSS Custom Properties ===== */
+:root {
+  --bg: #faf9f6;
+  --bg-secondary: #f3f0ea;
+  --surface: #edeae2;
+  --border: #d4cfc5;
+  --text-primary: #1a1a14;
+  --text-secondary: #6b6a5c;
+  --accent: #3d6b4a;
+  --accent-hover: #2e5239;
+  --nav-height: 64px;
+  --mono: 'JetBrains Mono', ui-monospace, monospace;
+}
 
-* {
-  -webkit-font-smoothing: antialiased;
+[data-theme="dark"] {
+  --bg: #141414;
+  --bg-secondary: #1a1a1a;
+  --surface: #222222;
+  --border: #2e2e2e;
+  --text-primary: #f0ede4;
+  --text-secondary: #9a9a86;
+  --accent: #6aab7a;
+  --accent-hover: #85c094;
+}
+
+/* ===== Reset ===== */
+*, *::before, *::after {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
+body {
+  font-family: 'JetBrains Mono', ui-monospace, monospace;
+  background-color: var(--bg);
+  color: var(--text-primary);
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
 
-/* Container design */
-.design {
-  display: grid;
-  background-color: #ffffff;
-  justify-content: center;
+/* ===== Layout ===== */
+.container {
+  max-width: 860px;
   margin: 0 auto;
+  padding: 0 24px;
 }
 
-/* Styles for the slogan heading */
-.design .hi-i-m-oliver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 128px;
-  letter-spacing: 0;
-  line-height: 1; /* Ensure tight line-height */
-  white-space: nowrap;
-  color: #000000;
-  margin-top: 7%;
-  margin-left: 57.5%;
-/*  margin-bottom: -3%;*/
+section {
+  padding: 96px 0;
 }
 
-/* Styles for the data section */
-.design .data {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 225px;
-  letter-spacing: 0;
-  color: #000000;
-  line-height: 0.75; 
-
+section:nth-child(even) {
+  background-color: var(--bg-secondary);
 }
 
-/* Styles for the scientist section */
-.design .scientist {
-  overflow: visible;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 225px;
-  letter-spacing: 0;
-  color: #c4fa3b;
-  line-height: 0.65; /* Ensure tight line-height */
-  margin-top: -100px;
+/* ===== Navigation ===== */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--bg);
+  border-bottom: 1px solid var(--border);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
 }
 
-/* Styles for the problem solver section */
-.design .problem-solver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 225px;
-  letter-spacing: 0;
-  color: #000000;
-  white-space: nowrap;
-  line-height: 1;
-}
-
-/* Define the flex container */
-.stack {
+nav {
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 0 24px;
+  height: var(--nav-height);
   display: flex;
-/*  overflow: visible;*/
-line-height: ;
+  align-items: center;
+  gap: 32px;
 }
 
-/* rectangle */
-.design .i-am-an-aspiring {
-  align-self: flex-end;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 32px;
-  letter-spacing: 0;
-  line-height: 1; /* Ensure tight line-height */
-  border: 2px solid #000000;
-  z-index: 1;
-  width: 300px;
-  margin-left: 706px;
-  overflow: visible;
-  padding: 10px
+.nav-logo {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  letter-spacing: -0.01em;
+  margin-right: auto;
 }
 
-.design #test {
-  margin-top:%;
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 28px;
 }
 
-/* Media breakpoints for dynamic window sizing */
-
-/* ULTRA TINYYYYYYY */
-@media (max-width: 430px)
-{
-
-  .design .hi-i-m-oliver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 32.33px; /* was 70.4 */
-  letter-spacing: 0;
-  line-height: 1; 
-  white-space: nowrap;
-  color: #000000;
-  margin-top: 7%;
-  margin-left: 58.5%;
+nav ul a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: color 0.15s;
 }
 
-.design .data {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 58.826px; /* was 123.75 */
-  letter-spacing: 0;
-  color: #000000;
-  line-height: 0.75; 
-
+nav ul a:hover {
+  color: var(--text-primary);
 }
 
-.design .scientist {
-  overflow: visible;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 58.826px; /* was 123.75 */
-  letter-spacing: 0;
-  color: #c4fa3b;
-  line-height: 1; 
-  margin-top: -40px;
+nav ul a.active {
+  color: var(--text-primary);
+  font-weight: 600;
 }
 
-.design .problem-solver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 58.826px; /* was 123.75 */
-  letter-spacing: 0;
-  color: #000000;
-  white-space: nowrap;
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  padding: 6px 10px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: border-color 0.15s, color 0.15s;
   line-height: 1;
 }
 
-.design .i-am-an-aspiring {
-  align-self: flex-end;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 8.1px; /* was 17.6 */
-  letter-spacing: 0;
-  line-height: 1; 
-  border: 1.75px solid #000000;
-  z-index: 1;
-  width: 75.768px; /* was 165 */
-  margin-left: 187px;
-  overflow: visible;
-  padding: 2.75px /* was 10 */
-} 
+.theme-toggle:hover {
+  border-color: var(--text-secondary);
+  color: var(--text-primary);
 }
-/* Small devices (up to 768px) */
-@media (min-width: 430px) and (max-width: 768px) 
-{
 
-  .design .hi-i-m-oliver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
+/* ===== Hero ===== */
+.hero {
+  padding: 120px 0 100px;
+  min-height: calc(100vh - var(--nav-height));
+  display: flex;
+  align-items: center;
+}
+
+.hero-container {
+  display: flex;
+  align-items: center;
+  gap: 64px;
+}
+
+.hero-text {
+  flex: 1;
+  min-width: 0;
+}
+
+.hero-text-inner {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.hero-portrait {
+  flex-shrink: 0;
+}
+
+.hero-portrait img {
+  width: 220px;
+  height: 220px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center top;
+  border: 3px solid var(--border);
+  display: block;
+}
+
+.hero-greeting {
+  font-size: 1rem;
+  color: var(--text-secondary);
+  margin-bottom: 10px;
   font-weight: 400;
-  font-size: 39.424px; /* was 70.4 */
-  letter-spacing: 0;
-  line-height: 1; 
+}
+
+.hero-name {
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 14px;
+}
+
+.hero-title {
+  font-size: 1rem;
+  font-family: var(--mono);
+  color: var(--accent);
+  font-weight: 600;
+  margin-bottom: 24px;
+  text-shadow: 0 0 18px rgba(61, 107, 74, 0.35);
+}
+
+.hero-tagline {
+  font-size: 1.05rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+  margin-bottom: 36px;
+}
+
+.hero-links {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 24px;
+}
+
+.hero-location {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Buttons ===== */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 9px 18px;
+  border-radius: 3px;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.15s;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.btn-primary {
+  background-color: var(--accent);
+  color: #fff;
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-hover);
+  border-color: var(--accent-hover);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--text-primary);
+  border: 1px solid var(--border);
+}
+
+.btn-outline:hover {
+  border-color: var(--text-secondary);
+}
+
+/* ===== Section Titles ===== */
+.section-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  margin-bottom: 48px;
+}
+
+/* ===== Experience Timeline ===== */
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 52px;
+}
+
+.timeline-item {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 32px;
+}
+
+.timeline-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding-top: 3px;
+}
+
+.timeline-date {
+  font-size: 0.72rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
+}
+
+.timeline-company {
+  font-size: 0.8rem;
+  font-family: var(--mono);
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.timeline-content h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 14px;
+  letter-spacing: -0.01em;
+}
+
+.timeline-content ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.timeline-content ul li {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  padding-left: 18px;
+  position: relative;
+  line-height: 1.65;
+}
+
+.timeline-content ul li::before {
+  content: "—";
+  position: absolute;
+  left: 0;
+  color: var(--border);
+}
+
+.timeline-summary {
+  font-size: 0.925rem;
+  color: var(--text-secondary);
+  line-height: 1.75;
+}
+
+.timeline-summary a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.timeline-summary a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Projects ===== */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.project-card {
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  padding: 24px;
+  transition: border-color 0.15s;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-card:hover {
+  border-color: var(--text-secondary);
+}
+
+.project-card--current {
+  border-color: var(--accent);
+}
+
+.project-card--current:hover {
+  border-color: var(--accent-hover);
+}
+
+.project-badge {
+  font-size: 0.67rem;
+  font-weight: 600;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+  border-radius: 3px;
+  padding: 2px 8px;
+  flex-shrink: 0;
+  margin-left: 12px;
   white-space: nowrap;
-  color: #000000;
-  margin-top: 7%;
-  margin-left: 57.5%;
+  align-self: center;
 }
 
-.design .data {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 69.3px; /* was 123.75 */
-  letter-spacing: 0;
-  color: #000000;
-  line-height: 0.75; 
-
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
 }
 
-.design .scientist {
-  overflow: visible;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 69.3px; /* was 123.75 */
-  letter-spacing: 0;
-  color: #c4fa3b;
-  line-height: 1; 
-  margin-top: -40px;
+.project-header h3 {
+  font-size: 0.975rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
 }
 
-.design .problem-solver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 69.3px; /* was 123.75 */
-  letter-spacing: 0;
-  color: #000000;
-  white-space: nowrap;
-  line-height: 1;
+.project-link {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: color 0.15s;
+  flex-shrink: 0;
+  margin-left: 12px;
+  margin-top: -2px;
 }
 
-.design .i-am-an-aspiring {
-  align-self: flex-end;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 9.856px; /* was 17.6 */
-  letter-spacing: 0;
-  line-height: 1; 
-  border: 2px solid #000000;
-  z-index: 1;
-  width: 92.4px; /* was 165 */
-  margin-left: 217px;
-  overflow: visible;
-  padding: 3px /* was 10 */
-} 
+.project-link:hover {
+  color: var(--text-primary);
 }
 
-/* Medium devices (769px to 1024px) */
-@media (min-width: 769px) and (max-width: 1024px) 
-{
- .design .hi-i-m-oliver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 70.4px; /* was 79 */
-  letter-spacing: 0;
-  line-height: 1; 
-  white-space: nowrap;
-  color: #000000;
-  margin-top: 7%;
-  margin-left: 57.5%;
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+  margin-bottom: 20px;
+  flex: 1;
 }
 
-.design .data {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 123.75px; /* was 225 */
-  letter-spacing: 0;
-  color: #000000;
-  line-height: 0.75; 
-
+.project-card p a {
+  color: var(--accent);
+  text-decoration: none;
 }
 
-.design .scientist {
-  overflow: visible;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 123.75px; /* was 225 */
-  letter-spacing: 0;
-  color: #c4fa3b;
-  line-height: 1; 
-  margin-top: -100px;
+.project-card p a:hover {
+  text-decoration: underline;
 }
 
-.design .problem-solver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 123.75px; /* was 225 */
-  letter-spacing: 0;
-  color: #000000;
-  white-space: nowrap;
-  line-height: 1;
+/* ===== Tags ===== */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
 }
 
-.design .i-am-an-aspiring {
-  align-self: flex-end;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 17.6px; /* was 32 */
-  letter-spacing: 0;
-  line-height: 1; 
-  border: 1px solid #000000;
-  z-index: 1;
-  width: 165px; /* was 300 */
-  margin-left: 388px;
-  overflow: visible;
-  padding: 10px
-} 
+.tag {
+  display: inline-block;
+  padding: 3px 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 3px;
+  font-size: 0.72rem;
+  font-family: var(--mono);
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: background-color 0.2s;
 }
 
-/* Large devices (1025px and up) */
-@media (min-width: 1025px) and (max-width: 1390px) 
-{
-  .design .hi-i-m-oliver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 94.72px; /* was 128 */
-  letter-spacing: 0;
-  line-height: 1; 
-  white-space: nowrap;
-  color: #000000;
-  margin-top: 7%;
-  margin-left: 57.5%;
+[data-theme="dark"] .tag {
+  background-color: var(--surface);
 }
 
-.design .data {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 166.5px; /* was 225 */
-  letter-spacing: 0;
-  color: #000000;
-  line-height: 0.75; 
-
+/* ===== Skills ===== */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
 }
 
-.design .scientist {
-  overflow: visible;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 166.5px; /* was 225 */
-  letter-spacing: 0;
-  color: #c4fa3b;
-  line-height: 1; 
-  margin-top: -100px;
+.skill-group h4 {
+  font-size: 0.72rem;
+  font-weight: 600;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 14px;
 }
 
-.design .problem-solver {
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 166.55px; /* was 225 */
-  letter-spacing: 0;
-  color: #000000;
-  white-space: nowrap;
-  line-height: 1;
+/* ===== Personal ===== */
+.personal-prose {
+  max-width: 560px;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 }
 
-.design .i-am-an-aspiring {
-  align-self: flex-end;
-  position: relative;
-  font-family: "Staatliches", Helvetica;
-  font-weight: 400;
-  font-size: 23.7px; /* was 32 */
-  letter-spacing: 0;
-  line-height: 1; 
-  border: 1px solid #000000;
-  z-index: 1;
-  width: 222px; /* was 300 */
-  margin-left: 520px;
-  overflow: visible;
-  padding: 10px
-} 
+.personal-prose p {
+  font-size: 0.975rem;
+  color: var(--text-secondary);
+  line-height: 1.85;
+}
+
+.personal-intro {
+  font-size: 1.025rem;
+  color: var(--text-secondary);
+  max-width: 600px;
+  margin-bottom: 40px;
+  line-height: 1.75;
+}
+
+.personal-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+.personal-item {
+  padding: 20px;
+  background-color: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.15s;
+}
+
+.personal-item:hover {
+  border-color: var(--text-secondary);
+}
+
+.personal-label {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  font-family: var(--mono);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--text-secondary);
+  margin-bottom: 8px;
+}
+
+.personal-item p {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  line-height: 1.65;
+}
+
+/* ===== Footer ===== */
+footer {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border);
+  padding: 40px 0;
+}
+
+.footer-links {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 12px;
+}
+
+.footer-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.875rem;
+  transition: color 0.15s;
+}
+
+.footer-links a:hover {
+  color: var(--text-primary);
+}
+
+.footer-copy {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+}
+
+/* ===== Scroll Fade-In ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(18px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+  section {
+    padding: 64px 0;
+  }
+
+  .hero {
+    padding: 72px 0 60px;
+    min-height: auto;
+  }
+
+  .timeline-item {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .timeline-meta {
+    flex-direction: row;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .skills-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .personal-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  nav ul {
+    display: none;
+  }
+
+  .hero-portrait img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .hero-container {
+    gap: 32px;
+  }
+}
+
+@media (max-width: 480px) {
+  .personal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-name {
+    font-size: 2.25rem;
+  }
+
+  .hero-links {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
